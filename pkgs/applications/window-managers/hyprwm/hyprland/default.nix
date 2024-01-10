@@ -24,6 +24,7 @@
 , wayland
 , wayland-protocols
 , wayland-scanner
+, tomlplusplus
 , wlroots
 , xcbutilwm
 , xwayland
@@ -99,6 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
       wayland-protocols
       pango
       pciutils
+      tomlplusplus
       (wlroots.override { inherit enableNvidiaPatches; })
     ]
     ++ lib.optionals stdenv.hostPlatform.isMusl [ libexecinfo ]
